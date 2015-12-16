@@ -1,0 +1,92 @@
+// GOV.UK front end toolkit dependencies
+@import "colours";
+@import "shims";
+@import "measurements";
+@import "typography";
+@import "css3";
+@import "url-helpers";
+@import "grid_layout";
+
+// Patterns
+@import 'patterns/check-your-answers';
+@import 'patterns/homepage-header';
+@import 'patterns/full-width';
+
+
+
+a[href="#"]:visited{
+	color: $link-colour;
+}
+
+
+.module-header{
+	border-top: 1px solid $border-colour;
+	padding-top: $gutter;
+}
+
+.item{
+	.heading-small{
+		margin-bottom: 5px;
+	}
+	margin-bottom: $gutter;
+}
+
+.metadata-header{
+	dl{
+		margin-bottom: $gutter;
+	}
+	dt, dd{
+		display: inline-block;
+    	vertical-align: top;
+	}
+	dt{
+		width: 20%;
+	}
+	dd{
+		width: 70%;
+    	margin-bottom: 0.5em;
+	}
+	@include core-14;
+}
+
+.column-three-quarters {
+    @include grid-column( 3/4 );
+    margin-left: 200px;
+ }
+
+#global-header.with-proposition .header-wrapper .header-global,
+.column-quarter.navigation{
+ 	width: 200px;
+ }
+
+
+.column-quarter.navigation{
+
+	position: fixed;
+    top: 63px;
+
+ 	li a{
+		text-decoration: none;
+		&:before{
+			content: "–";
+	    	margin-right: 6px;
+		}
+	}
+	ul ul{
+		margin-left: 10px;
+	}
+}
+
+
+.sticky {
+    position: fixed;
+    top: 63px;
+}
+
+.active{
+	font-weight: bold;
+}
+
+.align-column-right{
+	margin-left: 200px;
+}
